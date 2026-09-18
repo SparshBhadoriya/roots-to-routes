@@ -1,0 +1,594 @@
+.dashboard-page {
+  min-height: 100vh;
+  background: #11100e;
+  color: #f5efe6;
+}
+
+.dashboard-header {
+  min-height: 82px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #171512;
+}
+
+.dashboard-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dashboard-brand img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dashboard-brand div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dashboard-brand strong {
+  font-size: 15px;
+  letter-spacing: 1.5px;
+}
+
+.dashboard-brand span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #c98f52;
+}
+
+.dashboard-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dashboard-user span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dashboard-user button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.dashboard-main {
+  width: min(1200px, 88%);
+  margin: 0 auto;
+  padding: 55px 0 80px;
+}
+
+.dashboard-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.dashboard-eyebrow {
+  color: #c98f52;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.dashboard-heading h1 {
+  margin: 0;
+  font-size: 48px;
+  font-family: Georgia, serif;
+  font-weight: 500;
+}
+
+.dashboard-heading p {
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 12px;
+}
+
+.add-tour-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #c98f52;
+  color: #11100e;
+  border: none;
+  border-radius: 7px;
+  padding: 13px 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 45px;
+}
+
+.stat-card {
+  background: #191714;
+  border: 1px solid rgba(201, 143, 82, 0.2);
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(201, 143, 82, 0.12);
+  color: #c98f52;
+}
+
+.stat-card div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stat-card span {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.stat-card strong {
+  font-size: 27px;
+}
+
+.dashboard-section {
+  background: #191714;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 28px;
+}
+
+.section-title {
+  margin-bottom: 25px;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.section-title p {
+  margin: 7px 0 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+.tour-table-wrapper,
+.enquiry-table-wrapper {
+  overflow-x: auto;
+}
+
+.tour-table,
+.enquiry-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tour-table th,
+.enquiry-table th {
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tour-table td,
+.enquiry-table td {
+  padding: 17px 13px;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.status-active,
+.status-inactive,
+.status-enquiry {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+.status-active {
+  background: rgba(80, 150, 100, 0.15);
+  color: #83c891;
+}
+
+.status-inactive {
+  background: rgba(180, 80, 70, 0.15);
+  color: #e58d84;
+}
+
+.status-enquiry {
+  background: rgba(201, 143, 82, 0.15);
+  color: #d7a36a;
+}
+
+.dashboard-loading,
+.dashboard-empty {
+  padding: 30px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 800px) {
+  .dashboard-header {
+    padding: 15px 5%;
+  }
+
+  .dashboard-user span {
+    display: none;
+  }
+
+  .dashboard-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-heading h1 {
+    font-size: 38px;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-main {
+    width: 90%;
+    padding-top: 35px;
+  }
+}
+/* =========================================
+   ADD TOUR FORM
+========================================= */
+
+.tour-form-section {
+  background: #191714;
+  border: 1px solid rgba(201, 143, 82, 0.25);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 28px;
+}
+
+.tour-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.tour-form-header h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.tour-form-header p:not(.dashboard-eyebrow) {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+.close-tour-form {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.close-tour-form:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tour-form {
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.72);
+  letter-spacing: 0.3px;
+}
+
+.form-field label span {
+  margin-left: 8px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: #11100e;
+  color: #fff;
+  padding: 13px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.form-field input {
+  height: 46px;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.5;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: rgba(201, 143, 82, 0.7);
+  background: #15130f;
+}
+
+.form-checkbox {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.form-checkbox input {
+  width: 17px;
+  height: 17px;
+  accent-color: #c98f52;
+  cursor: pointer;
+}
+
+.form-checkbox label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.tour-form-error {
+  margin-top: 22px;
+  padding: 12px 14px;
+  border: 1px solid rgba(220, 100, 90, 0.3);
+  border-radius: 8px;
+  background: rgba(180, 80, 70, 0.1);
+  color: #e58d84;
+  font-size: 13px;
+}
+
+.tour-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.cancel-tour-button,
+.save-tour-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-tour-button {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.cancel-tour-button:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.save-tour-button {
+  border: 1px solid #c98f52;
+  background: #c98f52;
+  color: #11100e;
+}
+
+.save-tour-button:hover {
+  background: #d7a36a;
+}
+
+.cancel-tour-button:disabled,
+.save-tour-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   TOUR ACTION
+========================================= */
+
+.tour-delete-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(220, 100, 90, 0.25);
+  background: rgba(180, 80, 70, 0.08);
+  color: #e58d84;
+  padding: 7px 10px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.tour-delete-button:hover {
+  background: rgba(180, 80, 70, 0.16);
+}
+
+
+/* =========================================
+   MOBILE TOUR FORM
+========================================= */
+
+@media (max-width: 700px) {
+  .tour-form-section {
+    padding: 22px;
+  }
+
+  .tour-form-header {
+    margin-bottom: 24px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field.full-width,
+  .form-checkbox {
+    grid-column: auto;
+  }
+
+  .tour-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-tour-button,
+  .save-tour-button {
+    width: 100%;
+  }
+}
+/* =========================================
+   TOUR ACTION BUTTONS
+========================================= */
+
+.tour-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tour-edit-button,
+.tour-delete-button,
+.tour-activate-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 6px 10px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tour-edit-button {
+  border: 1px solid rgba(201, 143, 82, 0.35);
+  background: rgba(201, 143, 82, 0.08);
+  color: #d7a36a;
+}
+
+.tour-edit-button:hover {
+  background: rgba(201, 143, 82, 0.18);
+}
+
+.tour-delete-button {
+  border: 1px solid rgba(220, 100, 90, 0.25);
+  background: rgba(180, 80, 70, 0.08);
+  color: #e58d84;
+}
+
+.tour-delete-button:hover {
+  background: rgba(180, 80, 70, 0.16);
+}
+
+.tour-activate-button {
+  border: 1px solid rgba(80, 150, 100, 0.3);
+  background: rgba(80, 150, 100, 0.08);
+  color: #83c891;
+}
+
+.tour-activate-button:hover {
+  background: rgba(80, 150, 100, 0.17);
+}
+
+
+/* =========================================
+   MOBILE ACTIONS
+========================================= */
+
+@media (max-width: 800px) {
+  .tour-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tour-edit-button,
+  .tour-delete-button,
+  .tour-activate-button {
+    width: 100%;
+  }
+}
