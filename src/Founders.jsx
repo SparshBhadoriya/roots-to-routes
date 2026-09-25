@@ -223,7 +223,7 @@ export default function Founders() {
               <div className="founder-divider" />
 
               <p>
-                Yogesh Dev Gola is an entrepreneur with a background in
+                 Adv.Yogesh Dev Gola is an entrepreneur with a background in
                 B.Sc. LL.B. and experience in law, customer handling,
                 and business operations. His professional experience
                 has helped him develop strong communication skills,
