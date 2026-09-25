@@ -211,7 +211,7 @@ export default function Founders() {
               </p>
 
               <h3>
-                Yogesh
+               Adv.Yogesh
                 <br />
                 Dev Gola
               </h3>
